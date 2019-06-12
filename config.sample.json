@@ -1,0 +1,11 @@
+{
+  "journey": {
+    "departureStation": "LLJ",
+    "destinationStation": null
+  },
+  "refreshTime": 120,
+  "transportApi": {
+    "appId": "ddf305e1",
+    "apiKey": "362338808eb195ab7feb25985144edcc"
+  }
+}
