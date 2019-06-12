@@ -39,7 +39,7 @@ class HelloApp(WinForms.Form):
        winforms programming and event-based programming in Python."""
 
     def __init__(self):
-        self.Text = "UK Trains Win @ "
+        self.Text = "UK Trains Win"
         self.AutoScaleBaseSize = Size(5, 13)
         self.ClientSize = Size(392, 117)
         h = WinForms.SystemInformation.CaptionHeight
@@ -47,7 +47,7 @@ class HelloApp(WinForms.Form):
 
         # Create the button
         self.button = WinForms.Button()
-        self.button.Location = Point(16, 64)
+        self.button.Location = Point(32, 64)
         self.button.Size = Size(100, 20)
         self.button.TabIndex = 2
         self.button.Text = "Refresh"
@@ -55,17 +55,23 @@ class HelloApp(WinForms.Form):
         # Register the event handler
         self.button.Click += self.button_Click
 
+        self.departCount = WinForms.Label()
+        self.departCount.Text = "departure count"
+        self.departCount.Size = Size(400, 40)
+        self.departCount.Location = Point(8, 12)
+
         # Create the text box
-        self.textbox = WinForms.TextBox()
+        self.textbox = WinForms.Label()
         self.textbox.Text = "train details should be here"
         self.textbox.TabIndex = 1
         self.textbox.Size = Size(400, 40)
-        self.textbox.Location = Point(16, 24)
+        self.textbox.Location = Point(16, 32)
 
         # Add the controls to the form
         self.AcceptButton = self.button
         self.Controls.Add(self.button)
         self.Controls.Add(self.textbox)
+        self.Controls.Add(self.departCount)
 
     def button_Click(self, sender, args):
         print ("Click")
@@ -84,6 +90,8 @@ def refresh(form, config):
     #print (departures)
 
     try:
+        departureCount = len(departures)
+        form.departCount.Text = str(departureCount)
         nextDeparture = departures[0]
         #print (firstDepartureDestinations)
         #print (departureStation)
