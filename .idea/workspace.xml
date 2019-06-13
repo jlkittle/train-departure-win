@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4e450ee-80dd-4758-8161-a8b99a1d6c4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/train-departure-win.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/train-departure-win.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trains.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trains.py" afterDir="false" />
-    </list>
+    <list default="true" id="d4e450ee-80dd-4758-8161-a8b99a1d6c4c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,26 +172,32 @@
       <option name="project" value="LOCAL" />
       <updated>1560304546879</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="begin to separate UI and data Query, cache data to reduce API hits during development">
+      <created>1560444849291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1560444849291</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="31" y="37" width="1828" height="1000" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24972068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49273744" visible="true" weight="0.3298731" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49273744" visible="true" weight="0.3298731" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4944134" weight="0.46712804" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298731" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5072626" side_tool="true" visible="true" weight="0.3298731" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.5072626" side_tool="true" visible="true" weight="0.3298731" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3298731" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -205,7 +206,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test box -&gt; label, add count of departures" />
-    <option name="LAST_COMMIT_MESSAGE" value="test box -&gt; label, add count of departures" />
+    <MESSAGE value="begin to separate UI and data Query, cache data to reduce API hits during development" />
+    <option name="LAST_COMMIT_MESSAGE" value="begin to separate UI and data Query, cache data to reduce API hits during development" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
