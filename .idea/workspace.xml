@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4e450ee-80dd-4758-8161-a8b99a1d6c4c" name="Default Changelist" comment="" />
+    <list default="true" id="d4e450ee-80dd-4758-8161-a8b99a1d6c4c" name="Default Changelist" comment="begin to separate UI and data Query, cache data to reduce API hits during development">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/train-departure-win.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/train-departure-win.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trains.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trains.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/train-departure-win.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-850">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="128">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
             </state>
           </provider>
         </entry>
@@ -22,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="445">
+              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -34,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trains.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="44" selection-start-line="43" selection-end-line="44" />
+            <state relative-caret-position="289">
+              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -44,8 +49,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.json">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/data/station/LLJ.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5211" selection-start-column="5196" selection-end-column="5211" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -60,7 +69,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>HelloApp</find>
+      <find>aimed_departure_time</find>
+      <find>aimed_pass_time</find>
       <find>loadData</find>
+      <find>loadStation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -72,14 +84,14 @@
         <option value="$PROJECT_DIR$/train-departure-win.py" />
         <option value="$PROJECT_DIR$/src/station.py" />
         <option value="$PROJECT_DIR$/src/train-departure-win.py" />
-        <option value="$PROJECT_DIR$/src/trains.py" />
         <option value="$PROJECT_DIR$/src/state.py" />
+        <option value="$PROJECT_DIR$/src/trains.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="31" />
-    <option name="y" value="37" />
+    <option name="x" value="47" />
+    <option name="y" value="38" />
     <option name="width" value="1828" />
     <option name="height" value="1000" />
   </component>
@@ -95,6 +107,17 @@
             <path>
               <item name="train-departure-win" type="b2602c69:ProjectViewProjectNode" />
               <item name="train-departure-win" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="train-departure-win" type="b2602c69:ProjectViewProjectNode" />
+              <item name="train-departure-win" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="train-departure-win" type="b2602c69:ProjectViewProjectNode" />
+              <item name="train-departure-win" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="station" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="train-departure-win" type="b2602c69:ProjectViewProjectNode" />
@@ -179,25 +202,32 @@
       <option name="project" value="LOCAL" />
       <updated>1560444849291</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="begin to separate UI and data Query, cache data to reduce API hits during development">
+      <created>1560445181086</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1560445181086</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="31" y="37" width="1828" height="1000" extended-state="0" />
+    <frame x="47" y="38" width="1828" height="1000" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24972068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49273744" visible="true" weight="0.3298731" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4944134" weight="0.46712804" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49217877" weight="0.3298731" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4932961" visible="true" weight="0.46712804" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298731" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.5072626" side_tool="true" visible="true" weight="0.3298731" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5067039" side_tool="true" weight="0.46712804" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3298731" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -214,28 +244,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/train-departure-win.py</url>
-          <line>61</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/train-departure-win.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/state.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/state.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/trains.py</url>
-          <line>44</line>
-          <option name="timeStamp" value="8" />
+          <line>67</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -249,9 +259,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/train-departure-win.py" />
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/sessions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -261,35 +268,45 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
+        <state relative-caret-position="171">
           <caret line="311" selection-start-line="311" selection-end-line="311" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trains.py">
+    <entry file="file://$PROJECT_DIR$/data/station/LLJ.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="44" selection-start-line="43" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="5211" selection-start-column="5196" selection-end-column="5211" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/state.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="445">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/trains.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/train-departure-win.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="128">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>

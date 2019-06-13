@@ -16,11 +16,11 @@ class App(WinForms.Form):
         self.AutoScaleBaseSize = Size(5, 13)
         self.ClientSize = Size(392, 117)
         h = WinForms.SystemInformation.CaptionHeight
-        self.MinimumSize = Size(500, (117 + h))
+        self.MinimumSize = Size(500, (600 + h))
 
         # Create the button
         self.button = WinForms.Button()
-        self.button.Location = Point(32, 64)
+        self.button.Location = Point(32, 540)
         self.button.Size = Size(100, 20)
         self.button.TabIndex = 2
         self.button.Text = "Refresh"
@@ -37,7 +37,7 @@ class App(WinForms.Form):
         self.textbox = WinForms.Label()
         self.textbox.Text = "train details should be here"
         self.textbox.TabIndex = 1
-        self.textbox.Size = Size(400, 40)
+        self.textbox.Size = Size(400, 400)
         self.textbox.Location = Point(16, 32)
 
         # Add the controls to the form
@@ -62,10 +62,12 @@ def refresh(form):
     if departures:
         departureCount = len(departures)
         form.departCount.Text = str(departureCount)
-        nextDeparture = departures[0]
-        #print (firstDepartureDestinations)
-        #print (departureStation)
-        form.textbox.Text =  "Platform " + nextDeparture.get("platform") + " @ " + nextDeparture.get("aimed_departure_time") + " from " + nextDeparture.get("origin_name") + " to " + nextDeparture.get("destination_name")
+        form.textbox.Text = ""
+        for nextDeparture in iter(departures):
+            try:
+                form.textbox.Text =  form.textbox.Text +"\nPlatform " + nextDeparture.platform + " @ " + nextDeparture.aimed_time + " from " + nextDeparture.origin_name + " to " + nextDeparture.destination_name
+            except:
+                print(nextDeparture.aimed_time + nextDeparture.platform + nextDeparture.origin_name)
     else:
         form.departCount.Text = "0"
         form.textbox.Text = "No current trains"

@@ -16,7 +16,7 @@ def loadDeparturesForStation(journeyConfig, appId, apiKey):
     localStation = ".\\data\\station\\" + departureStation + ".json"
 
     if os.path.exists(localStation):
-        print ("using cached station")
+        print ("using cached station for " + departureStation)
         with open(localStation, 'r') as f:
             data = json.load(f)
     else:
@@ -41,7 +41,7 @@ def loadDestinationsForDeparture(timetableUrl,service):
     localService = ".\\data\\service\\" + service + ".json"
 
     if os.path.exists(localService):
-        print ("using cached service")
+        print ("using cached service for " + service)
         with open(localService, 'r') as f:
             data = json.load(f)
     else:
@@ -53,4 +53,4 @@ def loadDestinationsForDeparture(timetableUrl,service):
             with open(localService, "a") as f:
                 json.dump(data,f)
 
-    return list(map(lambda x: x["station_name"], data["stops"]))[1:]
+    return data #list(map(lambda x: x["station_name"], data["stops"]))[1:]
