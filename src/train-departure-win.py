@@ -14,7 +14,7 @@ class App(WinForms.Form):
     def __init__(self):
         self.Text = "UK Trains Win"
         self.AutoScaleBaseSize = Size(5, 13)
-        self.ClientSize = Size(392, 117)
+        self.ClientSize = Size(1600, 117)
         h = WinForms.SystemInformation.CaptionHeight
         self.MinimumSize = Size(500, (600 + h))
 
@@ -37,7 +37,7 @@ class App(WinForms.Form):
         self.textbox = WinForms.Label()
         self.textbox.Text = "train details should be here"
         self.textbox.TabIndex = 1
-        self.textbox.Size = Size(400, 400)
+        self.textbox.Size = Size(1600, 400)
         self.textbox.Location = Point(16, 32)
 
         # Add the controls to the form
@@ -64,10 +64,25 @@ def refresh(form):
         form.departCount.Text = str(departureCount)
         form.textbox.Text = ""
         for nextDeparture in iter(departures):
-            try:
                 form.textbox.Text =  form.textbox.Text +"\nPlatform " + nextDeparture.platform + " @ " + nextDeparture.aimed_time + " from " + nextDeparture.origin_name + " to " + nextDeparture.destination_name
-            except:
-                print(nextDeparture.aimed_time + nextDeparture.platform + nextDeparture.origin_name)
+                fromStops = "   from "
+                toStops = "       to "
+                for stop in iter(nextDeparture.stops):
+                    aimed_time = stop["aimed_departure_time"]
+                    if not aimed_time:
+                        aimed_time = stop["aimed_arrival_time"]
+                    if aimed_time < nextDeparture.aimed_time:
+                        fromStops = fromStops + " " + stop["station_code"] + "(" + aimed_time + ") "
+                    else:
+                        try:
+                            if aimed_time > nextDeparture.aimed_time:
+                               toStops = toStops + " " + stop["station_code"] + "(" + aimed_time + ") "
+                        except:
+                            print(nextDeparture.aimed_time + nextDeparture.platform + nextDeparture.origin_name)
+                if fromStops.__contains__("("):
+                    form.textbox.Text = form.textbox.Text + "\n" + fromStops
+                if toStops.__contains__("("):
+                    form.textbox.Text = form.textbox.Text + "\n" + toStops
     else:
         form.departCount.Text = "0"
         form.textbox.Text = "No current trains"
